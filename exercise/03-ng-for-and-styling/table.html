@@ -4,7 +4,8 @@
 		<th>gender</th>
 		<th>height</th>
 	</tr>
-	<tr *ng-for="#person of people">
+	<tr *ng-for="#person of people"
+	    [ng-class]="getClass(person.height)">
 		<td>{{person.name}}</td>
 		<td>{{person.gender}}</td>
 		<td>{{person.height}}</td>
