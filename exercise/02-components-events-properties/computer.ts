@@ -8,12 +8,12 @@ export class Computer {
 	@Input() brand;
 	message;
 	
-	onHandOff() {
+	startTimer() {
 		console.log("getting sleepy method");
 		this.message = "Getting sleepy";
 	}
 	
-	onHandOn() {
+	cancelTimer() {
 		this.message="";
 	}
 

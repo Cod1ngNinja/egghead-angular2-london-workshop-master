@@ -8,7 +8,7 @@ import {Mouse} from "./mouse";
 	template: `
 	   <div>
 	     <computer #computer brand="PC"></computer>
-	     <mouse (hand-off)="computer.onHandOff()" (hand-on)="computer.onHandOn()"></mouse>
+	     <mouse (hand-off)="computer.startTimer()" (hand-on)="computer.cancelTimer()"></mouse>
 	   </div>
 	`
 })
