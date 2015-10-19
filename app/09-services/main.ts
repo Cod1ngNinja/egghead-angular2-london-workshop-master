@@ -15,4 +15,5 @@ class App{
 
 // foodservice instance will now be available throughout the children of my app
 bootstrap(App, 
+  // duck typing in TypeScript
   provide(FoodService, {useValue: {fruit:"banana"}}));
