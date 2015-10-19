@@ -19,4 +19,7 @@ class App {
 	}
 }
 
-bootstrap(App);
+bootstrap(App).then(
+    success => console.log('app starting...'),
+    error => console.log(error)
+);
