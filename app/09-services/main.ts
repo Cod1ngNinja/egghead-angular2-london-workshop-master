@@ -1,4 +1,5 @@
 import {Component, bootstrap} from "angular2/angular2";
+import {FoodService} from "./foodService";
 
 @Component({
 	selector: 'app',
@@ -7,6 +8,10 @@ import {Component, bootstrap} from "angular2/angular2";
 	`
 })
 class App{
+	constructor(foodService:FoodService) {
+		console.log(foodService);
+	}
 }
 
-bootstrap(App);
+// foodservice will now be available throughout my app
+bootstrap(App, [FoodService]);
