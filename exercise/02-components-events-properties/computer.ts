@@ -6,6 +6,16 @@ import {Component, Input} from "angular2/angular2";
 })
 export class Computer {
 	@Input() brand;
-	@Input() message;
+	message;
+	
+	onHandOff() {
+		console.log("getting sleepy method");
+		this.message = "Getting sleepy";
+	}
+	
+	onHandOn() {
+		this.message="";
+	}
+
 	constructor() {}
 }

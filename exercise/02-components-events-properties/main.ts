@@ -7,8 +7,8 @@ import {Mouse} from "./mouse";
 	directives: [Computer, Mouse],
 	template: `
 	   <div>
-	     <computer brand="PC" [message]="message"></computer>
-	     <mouse (hand-off)="gettingSleepy()" (hand-on)="onHandOn()"></mouse>
+	     <computer #computer brand="PC"></computer>
+	     <mouse (hand-off)="computer.onHandOff()" (hand-on)="computer.onHandOn()"></mouse>
 	   </div>
 	`
 })
@@ -18,16 +18,6 @@ class App {
 	constructor() {
 		this.message = "hello";
 	}
-
-    gettingSleepy() {
-		console.log("getting sleepy method");
-		this.message = "Getting sleepy";
-	}
-	
-	onHandOn() {
-		this.message="";
-	}
-
 }
 
 bootstrap(App);
