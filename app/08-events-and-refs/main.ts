@@ -5,9 +5,11 @@ import {EventDemo} from "./eventDemo";
 	selector: 'app',
 	directives: [EventDemo],
 	template: `
-	   <div><event-demo></event-demo></div>
+	   <div><event-demo [title]="movieName"></event-demo></div>
 	`
 })
-class App{}
+class App{
+	movieName = "Back to the future"
+}
 
 bootstrap(App);

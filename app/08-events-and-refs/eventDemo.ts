@@ -1,4 +1,4 @@
-import {Component} from "angular2/angular2";
+import {Component, Input} from "angular2/angular2";
 
 @Component({
 	selector:'event-demo',
@@ -12,7 +12,7 @@ import {Component} from "angular2/angular2";
 	`
 })
 export class EventDemo{
-	title = "Back to the future";
+	@Input() title;
 	onClick(name) {
 		console.log(name);
 	}
