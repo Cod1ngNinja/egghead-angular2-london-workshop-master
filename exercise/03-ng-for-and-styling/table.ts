@@ -8,9 +8,10 @@ import {starwarsPeople} from "./starwarsPeople";
 	styleUrls: ['table.css']
 })
 export class Table{
-	people: any[] = starwarsPeople;
+	people: any[];
 	
 	constructor() {
+		this.people = starwarsPeople;
 	}
 	
 	getClass(height: number):string {
