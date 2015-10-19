@@ -16,7 +16,6 @@ class App {
 	message: string;
 
 	constructor() {
-		this.message = "hello";
 	}
 }
 
