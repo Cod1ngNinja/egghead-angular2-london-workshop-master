@@ -1,17 +1,16 @@
 import {Component, bootstrap} from "angular2/angular2";
-import {FoodService} from "./foodService";
+import {Brother} from "./brother";
+import {Sister} from "./sister";
 
 @Component({
 	selector: 'app',
+	directives: [Brother, Sister]
 	template: `
-	   <div>Hello world</div>
+	   <div><brother></brother><sister></sister></div>
 	`
 })
 class App{
-	constructor(foodService:FoodService) {
-		console.log(foodService);
-	}
 }
 
 // foodservice instance will now be available throughout the children of my app
-bootstrap(App, [FoodService]);
+bootstrap(App);
