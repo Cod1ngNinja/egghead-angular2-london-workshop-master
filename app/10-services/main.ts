@@ -4,8 +4,9 @@ import {Theatre} from "./theatre";
 
 @Component({
 	selector: 'app',
+	directives: [Theatre],
 	template: `
-	   <div>Hello</div>
+	   <div><theatre></theatre></div>
 	`
 })
 class App{
