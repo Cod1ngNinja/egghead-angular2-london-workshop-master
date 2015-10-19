@@ -2,7 +2,7 @@ import {Component, Output, EventEmitter} from "angular2/angular2";
 
 @Component({
 	selector: "mouse",
-	template: `<div (mouseout)="mouseout()" (mouseover)="mouseover()">I'm a mouse</div>`
+	templateUrl: "mouse.html" 
 })
 export class Mouse {
 	@Output() handOff = new EventEmitter();
