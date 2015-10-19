@@ -11,7 +11,7 @@ import {Movie} from "./movie"
 	`]
 	template: `<div>
 	             <ul>
-				   <li [ng-class]="member === 'Doc' ? 'doc' : ''" *ng-for="#member of movie.cast">{{member}}</li>
+				   <li [ng-class]="getClass(member)" *ng-for="#member of movie.cast">{{member}}</li>
 				 </ul>
 			   </div>`
 })
@@ -20,5 +20,9 @@ export class Theatre{
 		public movie:Movie
 	) {
 		
+	}
+	
+	getClass(member): string {
+		if(member === 'Doc') return 'doc';
 	}
 }
