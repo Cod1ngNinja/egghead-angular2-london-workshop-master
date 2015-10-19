@@ -13,5 +13,5 @@ class App{
 	}
 }
 
-// foodservice will now be available throughout my app
+// foodservice instance will now be available throughout the children of my app
 bootstrap(App, [FoodService]);
