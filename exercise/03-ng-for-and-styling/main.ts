@@ -5,9 +5,7 @@ import {Table} from "./table"
     selector: `app`,
 	directives: [Table],
     template: `
-		<table>
-			
-		</table>
+		<table></table>
 	`
 })
 class App {}
