@@ -7,7 +7,7 @@ import {Component, FORM_DIRECTIVES, ControlGroup, Control, CORE_DIRECTIVES, Vali
 	    <div>
 		  <form [ng-form-model]="movie" (ng-submit)="onSubmit()">
 		    <input type="text" ng-control="name">
-		    <input type="text" ng-control="two">
+		    <input type="color" ng-control="two">
 			
 			<select ng-control="select">
 			  <option *ng-for="#o of selectOptions">{{o}}</option>
@@ -25,7 +25,7 @@ export class SimpleForm{
 	
 		movie = new ControlGroup({
 			name: new Control("Klas", Validators.required),
-			two: new Control(),
+			two: new Control("#FFEEAA"),
 			select: new Control(this.selectOptions[0])
 		})	
 		
