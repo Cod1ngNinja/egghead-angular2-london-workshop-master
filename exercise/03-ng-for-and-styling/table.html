@@ -1,10 +1,12 @@
 <table>
 	<tr>
 		<th>name</th>
+		<th>gender</th>
 		<th>height</th>
 	</tr>
 	<tr *ng-for="#person of people">
 		<td>{{person.name}}</td>
+		<td>{{person.gender}}</td>
 		<td>{{person.height}}</td>
 	</tr>
 </table>
