@@ -11,6 +11,10 @@ export class Computer {
 	startTimer() {
 		console.log("getting sleepy method");
 		this.message = "Getting sleepy";
+		setTimeout(() => {
+			console.log("timeout");
+			this.message = "I'm sleeping";
+		}, 3000);
 	}
 	
 	cancelTimer() {
