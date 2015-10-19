@@ -8,12 +8,13 @@ export class Computer {
 	@Input() brand;
 	message;
 	hidden: boolean;
+	timer;
 	
 	startTimer() {
 		console.log("getting sleepy method");
 		this.hidden = false;
 		this.message = "Getting sleepy";
-		setTimeout(() => {
+		this.timer = setTimeout(() => {
 			console.log("timeout");
 			this.message = "I'm sleeping";
 		}, 3000);
@@ -21,6 +22,7 @@ export class Computer {
 	
 	cancelTimer() {
 		this.hidden = true;
+		clearTimeout(this.timer);
 	}
 
 	constructor() {}
