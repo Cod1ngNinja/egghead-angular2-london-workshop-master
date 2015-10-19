@@ -1,4 +1,4 @@
-import {Component, FORM_DIRECTIVES, ControlGroup, Control, CORE_DIRECTIVES} from "angular2/angular2";
+import {Component, FORM_DIRECTIVES, ControlGroup, Control, CORE_DIRECTIVES, Validators} from "angular2/angular2";
 
 @Component({
 	selector:'simple-form',
@@ -24,12 +24,13 @@ export class SimpleForm{
 	selectOptions = ["fire", "earth", "wind"]
 	
 		movie = new ControlGroup({
-			name: new Control("Klas"),
+			name: new Control("Klas", Validators.required),
 			two: new Control(),
 			select: new Control(this.selectOptions[0])
 		})	
 		
 		onSubmit(){
 			console.log(this.movie.value);
+			console.log(this.movie.valid);
 		}
 }
