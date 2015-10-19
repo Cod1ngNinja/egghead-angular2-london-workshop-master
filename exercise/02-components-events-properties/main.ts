@@ -7,12 +7,23 @@ import {Mouse} from "./mouse";
 	directives: [Computer, Mouse],
 	template: `
 	   <div>
-	     <computer brand="PC"></computer>
-	     <mouse></mouse>
+	     <computer brand="PC" [message]="message"></computer>
+	     <mouse (hand-off)="gettingSleepy()"></mouse>
 	   </div>
 	`
 })
-class App{
+class App {
+	message: string;
+
+	constructor() {
+		this.message = "hello";
+	}
+
+    gettingSleepy() {
+		console.log("getting sleepy method");
+		this.message = "Getting seepy";
+	}
+
 
 }
 
