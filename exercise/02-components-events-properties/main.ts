@@ -8,7 +8,7 @@ import {Mouse} from "./mouse";
 	template: `
 	   <div>
 	     <computer brand="PC" [message]="message"></computer>
-	     <mouse (hand-off)="gettingSleepy()"></mouse>
+	     <mouse (hand-off)="gettingSleepy()" (hand-on)="onHandOn()"></mouse>
 	   </div>
 	`
 })
@@ -21,9 +21,12 @@ class App {
 
     gettingSleepy() {
 		console.log("getting sleepy method");
-		this.message = "Getting seepy";
+		this.message = "Getting sleepy";
 	}
-
+	
+	onHandOn() {
+		this.message="";
+	}
 
 }
 
