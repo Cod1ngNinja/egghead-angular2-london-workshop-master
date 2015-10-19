@@ -1,10 +1,10 @@
 import {Component, bootstrap} from "angular2/angular2";
-import {FirstComponent} from "./firstComponent";
-import {SecondComponent} from "./secondComponent";
+import {DEFAULT_COMPONENTS} from "./allComponents";
+
 
 @Component({
 	selector: 'app',
-	directives: [FirstComponent, SecondComponent],
+	directives: [DEFAULT_COMPONENTS],
 	template: `
 	   <div>
 	     <first-component></first-component>
