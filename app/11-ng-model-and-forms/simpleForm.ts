@@ -18,6 +18,7 @@ import {Component, FORM_DIRECTIVES, ControlGroup, Control, CORE_DIRECTIVES, Vali
 			
 		  </form>
 		</div>
+		<h1 *ng-if="!movie.valid">INVALID</h1>
 		{{movie.value | json}}
 		`
 })
