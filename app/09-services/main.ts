@@ -1,4 +1,4 @@
-import {Component, bootstrap} from "angular2/angular2";
+import {provide, Component, bootstrap} from "angular2/angular2";
 import {FoodService} from "./foodService";
 
 @Component({
@@ -14,4 +14,5 @@ class App{
 }
 
 // foodservice instance will now be available throughout the children of my app
-bootstrap(App, [FoodService]);
+bootstrap(App, 
+  provide(FoodService, {useValue: {fruit:"banana"}}));
