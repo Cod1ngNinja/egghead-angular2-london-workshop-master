@@ -4,9 +4,14 @@ import {Movie} from "./movie"
 @Component({
 	selector: 'theatre',
 	directives: [CORE_DIRECTIVES],
+	styles:[`
+	.doc{
+		background-color: gray;
+	}
+	`]
 	template: `<div>
 	             <ul>
-				   <li *ng-for="#member of movie.cast">{{member}}</li>
+				   <li [ng-class]="member === 'Doc' ? 'doc' : ''" *ng-for="#member of movie.cast">{{member}}</li>
 				 </ul>
 			   </div>`
 })

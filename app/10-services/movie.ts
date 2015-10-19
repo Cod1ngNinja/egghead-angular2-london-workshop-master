@@ -1,3 +1,3 @@
 export class Movie {
-	cast = ["Marty", "Biff"]
+	cast = ["Marty", "Biff", "Doc"]
 }
