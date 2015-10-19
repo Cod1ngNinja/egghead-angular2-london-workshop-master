@@ -6,7 +6,7 @@ import {Component} from "angular2/angular2";
 	template:`
 	<div>
 	  <input #name-input type="text">
-	  <button (click)="onClick(nameInput.value)">ClickMe</button>
+	  <button (click)="onClick(nameInput.value)">ClickMe</button>{{nameInput.value}}
 	</div>
 	`
 })
