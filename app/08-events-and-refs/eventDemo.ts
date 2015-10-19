@@ -4,8 +4,12 @@ import {Component} from "angular2/angular2";
 	selector:'event-demo',
 	template:`
 	<div>
-	  I'm in an event demo
+	  <button (click)="onClick()">ClickMe</button>
 	</div>
 	`
 })
-export class EventDemo{}
+export class EventDemo{
+	onClick() {
+		console.log("clicked");
+	}
+}
