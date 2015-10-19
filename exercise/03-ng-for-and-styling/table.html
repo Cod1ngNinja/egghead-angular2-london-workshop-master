@@ -1,3 +1,8 @@
-This is the table
-<div *ng-for="#person of people">{{person.name}}</div>
-<table></table>
+<table>
+	<tr>
+		<th>name</th>
+	</tr>
+	<tr *ng-for="#person of people">
+		<td>{{person.name}}</td>
+	</tr>
+</table>
