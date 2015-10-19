@@ -11,8 +11,6 @@ export class Table{
 	people: any[] = starwarsPeople;
 	
 	constructor() {
-		// people = starwarsPeople;
-		//console.log(people);
 	}
 	
 	getClass(height: number):string {
