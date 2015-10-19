@@ -11,7 +11,9 @@ import {Movie} from "./movie"
 	`]
 	template: `<div>
 	             <ul>
-				   <li [ng-class]="getClass(member)" *ng-for="#member of movie.cast">{{member}}</li>
+				   <li [ng-class]="getClass(member)"
+				       [style.color]="'green'"
+				       *ng-for="#member of movie.cast">{{member}}</li>
 				 </ul>
 			   </div>`
 })
