@@ -19,6 +19,10 @@ import {Component, FORM_DIRECTIVES, ControlGroup, Control, CORE_DIRECTIVES, Vali
 		  </form>
 		</div>
 		<h1 *ng-if="!movie.valid">INVALID</h1>
+		<div [ng-switch]="movie.value.select">
+		  <template ng-switch-when="fire">Burn</template>
+		  <template ng-switch-default>Select value</template>
+		</div>
 		{{movie.value | json}}
 		`
 })
