@@ -7,7 +7,7 @@ import {Mouse} from "./mouse";
 	directives: [Computer, Mouse],
 	template: `
 	   <div>
-	     <computer></computer>
+	     <computer brand="PC"></computer>
 	     <mouse></mouse>
 	   </div>
 	`
