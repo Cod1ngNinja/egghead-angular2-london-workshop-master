@@ -5,11 +5,15 @@ import {EventDemo} from "./eventDemo";
 	selector: 'app',
 	directives: [EventDemo],
 	template: `
-	   <div><event-demo [title]="movieName"></event-demo></div>
+	   <div><event-demo [title]="movieName" (tick)="onTick()"></event-demo></div>
 	`
 })
 class App{
 	movieName = "Back to the future"
+	
+	onTick() {
+		console.log("tock");
+	}
 }
 
 bootstrap(App);

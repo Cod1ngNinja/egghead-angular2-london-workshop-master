@@ -1,4 +1,4 @@
-import {Component, Input} from "angular2/angular2";
+import {Component, Input, Output, EventEmitter} from "angular2/angular2";
 
 @Component({
 	selector:'event-demo',
@@ -13,7 +13,9 @@ import {Component, Input} from "angular2/angular2";
 })
 export class EventDemo{
 	@Input() title;
+	@Output() tick = new EventEmitter();
 	onClick(name) {
 		console.log(name);
+		this.tick.next();
 	}
 }
