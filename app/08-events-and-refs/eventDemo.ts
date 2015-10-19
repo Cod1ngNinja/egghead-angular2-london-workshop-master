@@ -12,10 +12,11 @@ import {Component, Input, Output, EventEmitter} from "angular2/angular2";
 	`
 })
 export class EventDemo{
+	// parens output, square brackets input
 	@Input() title;
 	@Output() tick = new EventEmitter();
 	onClick(name) {
 		console.log(name);
-		this.tick.next();
+		this.tick.next({});
 	}
 }
