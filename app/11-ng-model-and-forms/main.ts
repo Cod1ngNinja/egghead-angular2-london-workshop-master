@@ -3,7 +3,7 @@ import {SimpleForm} from "./simpleForm";
 
 @Component({
     selector: `app`,
-	directives: [SimpleForm]
+	directives: [SimpleForm],
     template: `
 		<div>
 			<simple-form></simple-form>
