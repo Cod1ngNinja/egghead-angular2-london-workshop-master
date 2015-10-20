@@ -13,7 +13,7 @@ class Hi{
 
 @Component({
     selector: `app`,
-	directive: [Hi],
+	directives: [Hi],
     template: `
 		<div hi>
 			Hello World
